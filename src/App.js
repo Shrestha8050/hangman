@@ -53,18 +53,13 @@ function App() {
     const randomNo = Math.floor(Math.random() * Words.length);
     selectedWord = Words[randomNo];
   };
-
-  const check = (value) => {
-    setCorrectLetters([value]);
-  };
-
   return (
     <div className='App'>
       <Header setVisible={setVisible} />
       <div className='game-container'>
         <Figure wrongLetters={wrongLetters} />
         <WrongLetter wrongLetters={wrongLetters} />
-        <InputField check={check} />
+        <InputField />
         <Word selectedWord={selectedWord} correctLetters={correctLetters} />
       </div>
       <PopUp

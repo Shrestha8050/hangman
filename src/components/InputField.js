@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 
 const InputField = ({ check }) => {
-  const [value, setValue] = useState('');
   const [desktop, setDesktop] = useState(true);
-  const handleChange = (e) => {
-    setValue(e.target.value);
-  };
+
   return (
     <div className='input-field'>
       <div className='ask'>
@@ -17,14 +14,10 @@ const InputField = ({ check }) => {
         <>
           <input
             type='text'
-            maxLength='1'
-            value={value}
+            maxLength='0'
             className='input-letter'
-            onChange={handleChange}
+            placeholder='Click to open Key Board'
           />
-          <button onClick={(() => check(value), () => setValue(''))}>
-            Check
-          </button>
         </>
       )}
     </div>
